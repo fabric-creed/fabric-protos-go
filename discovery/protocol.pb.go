@@ -7,11 +7,11 @@ import (
 	context "context"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
-	gossip "github.com/hyperledger/fabric-protos-go/gossip"
-	msp "github.com/hyperledger/fabric-protos-go/msp"
-	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
+	gossip "github.com/fabric-creed/fabric-protos-go/gossip"
+	msp "github.com/fabric-creed/fabric-protos-go/msp"
+	grpc "github.com/fabric-creed/grpc"
+	codes "github.com/fabric-creed/grpc/codes"
+	status "github.com/fabric-creed/grpc/status"
 	math "math"
 )
 
@@ -1313,7 +1313,7 @@ const _ = grpc.SupportPackageIsVersion4
 
 // DiscoveryClient is the client API for Discovery service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/github.com/fabric-creed/grpc#ClientConn.NewStream.
 type DiscoveryClient interface {
 	// Discover receives a signed request, and returns a response.
 	Discover(ctx context.Context, in *SignedRequest, opts ...grpc.CallOption) (*Response, error)

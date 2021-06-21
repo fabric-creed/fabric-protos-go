@@ -7,11 +7,11 @@ import (
 	context "context"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
-	common "github.com/hyperledger/fabric-protos-go/common"
-	peer "github.com/hyperledger/fabric-protos-go/peer"
-	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
+	common "github.com/fabric-creed/fabric-protos-go/common"
+	peer "github.com/fabric-creed/fabric-protos-go/peer"
+	grpc "github.com/fabric-creed/grpc"
+	codes "github.com/fabric-creed/grpc/codes"
+	status "github.com/fabric-creed/grpc/status"
 	math "math"
 )
 
@@ -942,7 +942,7 @@ const _ = grpc.SupportPackageIsVersion4
 
 // GatewayClient is the client API for Gateway service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/github.com/fabric-creed/grpc#ClientConn.NewStream.
 type GatewayClient interface {
 	// The Endorse service passes a proposed transaction to the gateway in order to
 	// obtain sufficient endorsement.

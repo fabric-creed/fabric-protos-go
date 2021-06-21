@@ -7,10 +7,10 @@ import (
 	context "context"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
-	common "github.com/hyperledger/fabric-protos-go/common"
-	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
+	common "github.com/fabric-creed/fabric-protos-go/common"
+	grpc "github.com/fabric-creed/grpc"
+	codes "github.com/fabric-creed/grpc/codes"
+	status "github.com/fabric-creed/grpc/status"
 	math "math"
 )
 
@@ -593,7 +593,7 @@ const _ = grpc.SupportPackageIsVersion4
 
 // AtomicBroadcastClient is the client API for AtomicBroadcast service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/github.com/fabric-creed/grpc#ClientConn.NewStream.
 type AtomicBroadcastClient interface {
 	// broadcast receives a reply of Acknowledgement for each common.Envelope in order, indicating success or type of failure
 	Broadcast(ctx context.Context, opts ...grpc.CallOption) (AtomicBroadcast_BroadcastClient, error)
